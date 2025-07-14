@@ -79,6 +79,11 @@ npx -y mcp-system-infra
 }
 ~~~
 
+## MCP 示例：
+
+```
+帮忙设计一个web类型的系统，qps=100，concurrentUsers=50，activeUsersDaily=300，dbType=relational，modelSize=medium的系统架构报告
+```
 
 ## <div align="center">💭Murmurs</div>
 本项目仅用于学习，欢迎催更。如需定制功能、部署为 Web 服务、与内部推广平台对接，请联系产品维护者。
