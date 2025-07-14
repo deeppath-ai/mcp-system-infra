@@ -1,0 +1,7 @@
+runtime: "typescript"
+
+mcp:
+  enabled: true
+  port: 3000
+  transport: sse # Server-Sent Events
+  entry: ./src/ai.ts 

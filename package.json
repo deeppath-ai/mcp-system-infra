@@ -1,0 +1,49 @@
+{
+  "name": "mcp-system-infra",
+  "version": "0.0.1",
+  "main": "build/ai.js",
+  "module": "./src/ai.ts",
+  "scripts": {
+    "prebuild": "rm -rf build/*",
+    "build": "tsc",
+    "postbuild": "chmod +x build/ai.js",
+    "prepare": "npm run build",
+    "test": "tsc && node ./build/ai.js",
+    "test_sse": "tsc && node ./build/ai.js --port 8728",
+    "debug": "tsc && npx @modelcontextprotocol/inspector node ./build/ai.js"
+  },
+  "keywords": [
+    "mcp",
+    "crew",
+    "assess",
+    "infra",
+    "mcp-server"
+  ],
+  "author": "DeeppathAI",
+  "license": "MIT",
+  "description": "This is a system infra  on the Model Context Protocol (MCP). ",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.9.0",
+    "axios": "^1.8.4",
+    "cheerio": "^1.1.0",
+    "commander": "^14.0.0",
+    "date-fns": "^4.1.0",
+    "date-fns-tz": "^3.2.0",
+    "mcp-http-server": "^1.1.5",
+    "node-fetch": "^2.6.12",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.1",
+    "@types/node-fetch": "^2.6.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  },
+  "type": "module",
+  "bin": {
+    "mcp-system-infra": "./build/ai.js"
+  },
+  "files": [
+    "build"
+  ]
+}
